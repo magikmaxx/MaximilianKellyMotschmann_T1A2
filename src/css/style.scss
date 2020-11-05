@@ -1,0 +1,168 @@
+$primarybackgroundcolor: #eef0f2;
+$buttoncolor1: #daddd8;
+$buttoncolor2: #ecebe4;
+$primaryfont: Arial, Helvetica, sans-serif;
+$paragraphcolor: white;
+$footerbackground: #1c1c1c;
+@mixin menuborder {
+   border: 2px solid black;
+}
+@mixin phonemenu {
+    display: flex;
+    justify-content: center;
+    @include menuborder();
+    margin: 5%;
+    height: 4rem;
+    text-shadow: 2px 2px 1px gray;
+    box-shadow: 6px 5px 9px gray;
+    border-radius: 28px;
+
+    // This is responsible for getting the settings correct on Safari and Mozilla.
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+}
+@mixin heading1style {
+    font-size: 2em;
+    color: #1c1c1c;
+    font-family: $primaryfont;
+}
+@mixin heading2style {
+    font-size: 1em;
+    color: #1c1c1c;
+    font-family: $primaryfont;
+    margin-left: 5%;
+}
+@mixin flexdisplay {
+    display: flex;
+    justify-content: center;
+}
+// css starts here. https://stackoverflow.com/questions/17202128/rounded-cornes-border-radius-safari-issue <-- website is to get the image compatible with safari
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/background.jpg")
+}
+#headerbar {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    position: absolute; //This can cause issues, keep an eye on this how it can potentially greatly influence the layout.
+    top: 0;
+    left: 0;
+    background-color: $footerbackground;
+}
+.topcontainer {
+    @include flexdisplay();
+    flex-direction: column;
+    align-items: center;
+}
+.profilephoto {
+    @include flexdisplay();
+    align-self: center;
+    margin-top: 2em;
+}
+header {
+    @include flexdisplay();
+    text-align: center;
+}
+.profilephoto img {
+    border-radius: 100%;
+    vertical-align: middle;
+    max-height: 80%;
+    max-width: 80%;
+    box-shadow: 2px 6px 5px #1c1c1c;
+}
+h1 {
+    @include heading1style();
+}
+.paragraphcontainer {
+    text-align: center;
+    @include flexdisplay();
+    margin-top: 1em;
+}
+a {
+    margin-top: 1.7%;
+    color: #1c1c1c;
+    font-size: 250%;
+    font-family: $primaryfont;
+    text-decoration: none;
+}
+a:hover {
+    color: orange;
+}
+.navbutton1 {
+    background-color: $buttoncolor1;
+    @include phonemenu();
+}
+.navbutton2 {
+    background-color: $buttoncolor1;
+    @include phonemenu();
+}
+.navbutton1:hover, .navbutton2:hover {
+    background-color: #1B264F;
+}
+.navbutton1:visited, .navbutton2:visited {
+    background-color: red;
+}
+p {
+    color: $paragraphcolor;
+    font-family: $primaryfont;
+    margin-left: 5%;
+}
+#thefooter {
+    background-color: $footerbackground;
+    @include menuborder();
+    font-family: $primaryfont;
+    text-align: center;
+}
+footer {
+    color: white;
+    width: 100%;
+}
+
+//This section is responsible for designing the about me, projects, blog and contact pages
+.altnavdiv {
+    background-color: $footerbackground;
+    width: 100%;
+    @include flexdisplay();
+}
+.altnavbar {
+    display: flex;
+    font-size: 0.4em;
+    color: white;
+}
+.topnav {
+    color: white;
+    @include flexdisplay();
+}
+.navbutton3, .navbutton4 {
+    //@include menuborder();
+    position: static;   
+}
+h2 {
+    @include heading2style();
+}
+
+//blog posts
+.boxes {
+    @include flexdisplay();
+    flex-wrap: wrap;
+}
+.box {
+    background-color: green;
+    @include menuborder();
+    width: 19em;
+    height: 19em;
+    margin: 10px;
+}
+.blogimage {
+    max-width: 19em;
+    max-height: 19em;
+}
+
+
