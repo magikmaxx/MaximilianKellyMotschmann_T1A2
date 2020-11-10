@@ -2,8 +2,10 @@ $primarybackgroundcolor: #eef0f2;
 $buttoncolor1: #daddd8;
 $buttoncolor2: #ecebe4;
 $primaryfont: Arial, Helvetica, sans-serif;
-$paragraphcolor: white;
-$footerbackground: #1c1c1c;
+$paragraphcolor: dimgray;
+$linkfontcolor: blue;
+$footerbackground: linear-gradient(gray, black);
+$contentboxcolor: #ecebe4;
 @mixin menuborder {
    border: 2px solid black;
 }
@@ -30,7 +32,6 @@ $footerbackground: #1c1c1c;
     font-size: 1em;
     color: #1c1c1c;
     font-family: $primaryfont;
-    margin-left: 5%;
 }
 @mixin flexdisplay {
     display: flex;
@@ -42,6 +43,22 @@ $footerbackground: #1c1c1c;
     padding: 0;
     box-sizing: border-box;
 }
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+html,
+body {
+ height: 100%;
+ position: relative;
+}
+.Maincontainer {
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px; /* height of your footer */
+   }
 
 body {
     background-image: url("../images/background.jpg")
@@ -54,7 +71,10 @@ body {
     position: absolute; //This can cause issues, keep an eye on this how it can potentially greatly influence the layout.
     top: 0;
     left: 0;
-    background-color: $footerbackground;
+    background-image: linear-gradient(gray, black);
+}
+#headernote {
+    color: white;
 }
 .topcontainer {
     @include flexdisplay();
@@ -70,6 +90,7 @@ header {
     @include flexdisplay();
     text-align: center;
 }
+
 .profilephoto img {
     border-radius: 100%;
     vertical-align: middle;
@@ -80,8 +101,8 @@ header {
 h1 {
     @include heading1style();
 }
+
 .paragraphcontainer {
-    text-align: center;
     @include flexdisplay();
     margin-top: 1em;
 }
@@ -92,44 +113,62 @@ a {
     font-family: $primaryfont;
     text-decoration: none;
 }
-a:hover {
-    color: orange;
-}
 .navbutton1 {
     background-color: $buttoncolor1;
     @include phonemenu();
+    padding-top: 1%;
 }
-.navbutton2 {
-    background-color: $buttoncolor1;
-    @include phonemenu();
+.navbutton1:hover, .navbutton3:hover {
+    background-color: #C0C0C0;
 }
-.navbutton1:hover, .navbutton2:hover {
-    background-color: #1B264F;
+.navbutton1:visited {
+    color: #C0C0C0;
+    border: 2px #696969;
 }
-.navbutton1:visited, .navbutton2:visited {
-    background-color: red;
+.topnav:visited {
+    color: lightgrey;
 }
 p {
     color: $paragraphcolor;
     font-family: $primaryfont;
-    margin-left: 5%;
 }
+
 #thefooter {
-    background-color: $footerbackground;
-    @include menuborder();
+    background-image: $footerbackground;
     font-family: $primaryfont;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 footer {
     color: white;
     width: 100%;
 }
 
+
 //This section is responsible for designing the about me, projects, blog and contact pages
+.title {
+    width:100%;
+    text-align: center;
+    font-size: 3vh;
+    margin-top: 2%;
+    // margin-bottom: 2%;
+}
+li {
+    list-style-type: none;
+}
+.link {
+    font-family: $primaryfont;
+    color: $linkfontcolor;
+    font-size: 1em;
+    text-decoration: underline;
+}
 .altnavdiv {
     background-color: $footerbackground;
     width: 100%;
     @include flexdisplay();
+    background-image: $footerbackground;
 }
 .altnavbar {
     display: flex;
@@ -140,29 +179,172 @@ footer {
     color: white;
     @include flexdisplay();
 }
-.navbutton3, .navbutton4 {
-    //@include menuborder();
-    position: static;   
+.navbutton3 {
+    margin: 5px; 
 }
 h2 {
     @include heading2style();
 }
 
-//blog posts
-.boxes {
+
+// These boxes are responsible for the layout in About Me, Projects and Blog
+.parentboxcontainer {
     @include flexdisplay();
     flex-wrap: wrap;
 }
-.box {
-    background-color: green;
-    @include menuborder();
-    width: 19em;
+.parentboxcontainer {
+    @include flexdisplay();
+}
+.aboutmecontainer {
+    @include flexdisplay();
+    max-width: 90%;
+    max-height: 90%;
+    background-color: $contentboxcolor;
+    box-shadow: 2px 6px 5px #1c1c1c;
+    border-style: ridge;
+    border-radius: 20px;
+    margin-bottom: 3%;
+    margin-top: 1%;
+    padding: 2%;
+    text-align: center;
+}
+.containeraroundboximage {
+    @include flexdisplay();
+    border-radius: 20px;
+    width: 20em;
+    height: 40em;
+    background-color: $contentboxcolor;
+    box-shadow: 2px 6px 5px #1c1c1c;
+    border-style: ridge;
+    flex-wrap: wrap;
+    margin: 3%;
+}
+.boxcontainer {
     height: 19em;
-    margin: 10px;
+    width: 19em;
+    @include flexdisplay();
+    margin: 5%;
+    margin-bottom: 0;
+    border-radius: 10%;
+    // border: 10px groove red;
 }
-.blogimage {
-    max-width: 19em;
-    max-height: 19em;
+.gridimage {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    box-shadow: 2px 6px 5px gray;
+}
+h3 {
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+}
+.aboutmeparagraph {
+    text-align: center;
+    width: 90%;
+    // height: 80%;
+}
+// ------- Box layout ends here ---------
+
+//Contact page starts here
+
+.socialmedia {
+    @include flexdisplay();
+    flex-wrap: wrap;
 }
 
+// Style inputs with type="text", select elements and textareas 
+input[type=text], select, textarea {
+    width: 95%; // Full width 
+    padding: 12px; // Some padding
+    @include menuborder();
+    border-radius: 2vh; // Rounded borders 
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 2vh; // Add a top margin 
+    margin-bottom: 1vh; // Bottom margin 
+    resize: vertical; // Allow the user to vertically resize the textarea (not horizontally) 
+    // @include flexdisplay();
+  }
+  
+  // Style the submit button with a specific background color etc 
+  input[type=submit] {
+    background-color: gray;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  // When moving the mouse over the submit button, add a darker green color 
+  input[type=submit]:hover {
+    background-color: 758ECD;
+  }
+  
+  // Background color and some padding around the form 
+  .formcontainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  #form, #subject{
+      font-family: $primaryfont;
+      @include flexdisplay();
+      flex-wrap: wrap;
+  }
+  // ------------- Contact Page Ends Here ------------
 
+  //Display for minimum width 768 pixels.
+  @media screen and (min-width: 768px) {
+    #myname {
+        margin-top: -10vh;
+    }
+    .altnavdiv {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .altnavbar {
+        font-size: 1vh;
+    }
+    h1 {
+          font-size: 6vh;
+    }
+    h3 {
+        @include heading1style()
+    }
+ 
+    .profilephoto {
+          margin-top: 10%;
+    }
+  //Adjusts the text within the buttons
+      .navbutton1 {
+         margin-top: 2vh;
+    }
+    .containeraroundboximage {
+        width: 50em;
+        height: 50em;
+    }
+    .boxcontainer {
+        width: 35em;
+        height: 35em;
+    }
+    .title {
+        font-size: 4vh;
+    }
+  
+    #headernote {
+        font-size: 3vh;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .navbutton1 {
+        padding-top: 0.5%;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .navbutton1 {
+        margin-bottom: 0;
+    }
+    #myname {
+        margin-top: -20vh;
+    }
+  }
