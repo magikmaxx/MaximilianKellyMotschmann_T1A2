@@ -1,12 +1,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *:before,
 *:after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -30,37 +32,59 @@ body {
 }
 
 #headerbar {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(gray), to(black));
   background-image: linear-gradient(gray, black);
 }
 
-#headernote {
-  color: white;
-}
-
 .topcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .profilephoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   margin-top: 2em;
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
@@ -69,7 +93,8 @@ header {
   vertical-align: middle;
   max-height: 80%;
   max-width: 80%;
-  box-shadow: 2px 6px 5px #1c1c1c;
+  -webkit-box-shadow: 2px 6px 5px #1c1c1c;
+          box-shadow: 2px 6px 5px #1c1c1c;
 }
 
 h1 {
@@ -79,8 +104,12 @@ h1 {
 }
 
 .paragraphcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 1em;
 }
 
@@ -94,13 +123,18 @@ a {
 
 .navbutton1 {
   background-color: #daddd8;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 2px solid black;
   margin: 5%;
   height: 4rem;
   text-shadow: 2px 2px 1px gray;
-  box-shadow: 6px 5px 9px gray;
+  -webkit-box-shadow: 6px 5px 9px gray;
+          box-shadow: 6px 5px 9px gray;
   border-radius: 28px;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
@@ -126,6 +160,7 @@ p {
 }
 
 #thefooter {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(gray), to(black));
   background-image: linear-gradient(gray, black);
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -160,12 +195,19 @@ li {
 .altnavdiv {
   background-color: linear-gradient(gray, black);
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(gray), to(black));
   background-image: linear-gradient(gray, black);
 }
 
 .altnavbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 0.4em;
   color: white;
@@ -173,8 +215,12 @@ li {
 
 .topnav {
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .navbutton3 {
@@ -187,24 +233,42 @@ h2 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.parentboxcontainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+p, h3 {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .parentboxcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.parentboxcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .aboutmecontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 90%;
   max-height: 90%;
   background-color: #ecebe4;
-  box-shadow: 2px 6px 5px #1c1c1c;
+  -webkit-box-shadow: 2px 6px 5px #1c1c1c;
+          box-shadow: 2px 6px 5px #1c1c1c;
   border-style: ridge;
   border-radius: 20px;
   margin-bottom: 3%;
@@ -214,23 +278,33 @@ h2 {
 }
 
 .containeraroundboximage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 20px;
   width: 20em;
   height: 40em;
   background-color: #ecebe4;
-  box-shadow: 2px 6px 5px #1c1c1c;
+  -webkit-box-shadow: 2px 6px 5px #1c1c1c;
+          box-shadow: 2px 6px 5px #1c1c1c;
   border-style: ridge;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 3%;
 }
 
 .boxcontainer {
   height: 19em;
   width: 19em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 5%;
   margin-bottom: 0;
   border-radius: 10%;
@@ -240,7 +314,8 @@ h2 {
   width: 100%;
   height: 100%;
   border-radius: 10%;
-  box-shadow: 2px 6px 5px gray;
+  -webkit-box-shadow: 2px 6px 5px gray;
+          box-shadow: 2px 6px 5px gray;
 }
 
 h3 {
@@ -254,9 +329,14 @@ h3 {
 }
 
 .socialmedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 input[type=text], select, textarea {
@@ -264,7 +344,8 @@ input[type=text], select, textarea {
   padding: 12px;
   border: 2px solid black;
   border-radius: 2vh;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* Make sure that padding and width stays in place */
   margin-top: 2vh;
   margin-bottom: 1vh;
@@ -292,74 +373,73 @@ input[type=submit]:hover {
 
 #form, #subject {
   font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
   #myname {
     margin-top: -10vh;
   }
-
   .altnavdiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
-
   .altnavbar {
     font-size: 1vh;
   }
-
   h1 {
     font-size: 6vh;
   }
-
   h3 {
     font-size: 2em;
     color: #1c1c1c;
     font-family: Arial, Helvetica, sans-serif;
   }
-
   .profilephoto {
     margin-top: 10%;
   }
-
   .navbutton1 {
     margin-top: 2vh;
   }
-
   .containeraroundboximage {
     width: 50em;
     height: 50em;
   }
-
   .boxcontainer {
     width: 35em;
     height: 35em;
   }
-
   .title {
     font-size: 4vh;
   }
-
   #headernote {
     font-size: 3vh;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .navbutton1 {
     padding-top: 0.5%;
   }
 }
+
 @media screen and (min-width: 1280px) {
   .navbutton1 {
     margin-bottom: 0;
   }
-
   #myname {
     margin-top: -20vh;
   }
 }
-
 /*# sourceMappingURL=style.css.map */

@@ -37,7 +37,7 @@ $contentboxcolor: #ecebe4;
     display: flex;
     justify-content: center;
 }
-// css starts here. https://stackoverflow.com/questions/17202128/rounded-cornes-border-radius-safari-issue <-- website is to get the image compatible with safari
+// This part is to help keep the footer in place.
 * {
     margin: 0;
     padding: 0;
@@ -59,10 +59,11 @@ body {
     position: relative;
     padding-bottom: 100px; /* height of your footer */
    }
-
+// Adds a background image to the website
 body {
     background-image: url("../images/background.jpg")
 }
+//This is part of the index.html that positions the profile photo and aligns the text.
 #headerbar {
     display: inline-flex;
     flex-direction: row;
@@ -72,9 +73,6 @@ body {
     top: 0;
     left: 0;
     background-image: linear-gradient(gray, black);
-}
-#headernote {
-    color: white;
 }
 .topcontainer {
     @include flexdisplay();
@@ -98,6 +96,7 @@ header {
     max-width: 80%;
     box-shadow: 2px 6px 5px #1c1c1c;
 }
+// Changes the styile of the headings and paragraphs across all pages.
 h1 {
     @include heading1style();
 }
@@ -106,6 +105,7 @@ h1 {
     @include flexdisplay();
     margin-top: 1em;
 }
+// Changes Navigation for the index page
 a {
     margin-top: 1.7%;
     color: #1c1c1c;
@@ -132,6 +132,7 @@ p {
     color: $paragraphcolor;
     font-family: $primaryfont;
 }
+// Further footer adjustments
 
 #thefooter {
     background-image: $footerbackground;
@@ -147,7 +148,7 @@ footer {
 }
 
 
-//This section is responsible for designing the about me, projects, blog and contact pages
+//This section is responsible for designing the about me, projects, blog and contact pages including navbar
 .title {
     width:100%;
     text-align: center;
@@ -184,6 +185,9 @@ li {
 }
 h2 {
     @include heading2style();
+}
+p, h3 {
+    font-family: $primaryfont;
 }
 
 
@@ -251,7 +255,7 @@ h3 {
     @include flexdisplay();
     flex-wrap: wrap;
 }
-
+// This is responsible in creating the form to fill out in the contacts section
 // Style inputs with type="text", select elements and textareas 
 input[type=text], select, textarea {
     width: 95%; // Full width 
@@ -316,7 +320,7 @@ input[type=text], select, textarea {
           margin-top: 10%;
     }
   //Adjusts the text within the buttons
-      .navbutton1 {
+    .navbutton1 {
          margin-top: 2vh;
     }
     .containeraroundboximage {
@@ -334,12 +338,16 @@ input[type=text], select, textarea {
     #headernote {
         font-size: 3vh;
     }
+    
   }
+  // Adjustments made for bigger screen
   @media screen and (min-width: 1024px) {
     .navbutton1 {
         padding-top: 0.5%;
+
     }
   }
+  // Further adjustments at even larger screen
   @media screen and (min-width: 1280px) {
     .navbutton1 {
         margin-bottom: 0;
