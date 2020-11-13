@@ -35,6 +35,20 @@ For this website I used HTML and SCSS. The SCSS file was then automatically tran
 
 ![Sitemap](sitemap.jpeg "Sitemap")
 
+### Wireframes
+
+## Mobile View
+
+![Mobile-Wireframe](Wireframes/Mobile-Layout.png)
+
+## Tablet View
+
+![Tablet-Wireframe](Wireframes/Tablet-Layout.png)
+
+## Desktop View
+
+![Desktop-Wireframe](Wireframes/Desktop-Layout.png)
+
 ### Screenshots
 
 ## Mobile View
