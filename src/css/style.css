@@ -24,11 +24,10 @@ body {
   display: block;
   position: relative;
   padding-bottom: 100px;
-  /* height of your footer */
 }
 
 body {
-  background-image: url("../images/background.jpg");
+  background-image: url("/docs/images/background.jpg");
 }
 
 #headerbar {
@@ -328,6 +327,10 @@ h3 {
   width: 90%;
 }
 
+.date-of-post {
+  font-size: 12px;
+}
+
 .socialmedia {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,7 +365,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: 758ECD;
+  background-color: #758ECD;
 }
 
 .formcontainer {

@@ -62,7 +62,7 @@ body {
    }
 // Adds a background image to the website
 body {
-    background-image: url("../images/background.jpg")
+    background-image: url("/docs/images/background.jpg")
 }
 //This is part of the index.html that positions the profile photo and aligns the text.
 #headerbar {
@@ -254,6 +254,9 @@ h3 {
     text-align: center;
     width: 90%;
     // height: 80%;
+}
+.date-of-post {
+    font-size: 12px;
 }
 // ------- Box layout ends here ---------
 
