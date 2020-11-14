@@ -4,6 +4,7 @@ $paragraphcolor: dimgray;
 $linkfontcolor: blue;
 $footerbackground: linear-gradient(gray, black);
 $contentboxcolor: #ecebe4;
+
 @mixin menuborder {
    border: 2px solid black;
 }
@@ -35,12 +36,13 @@ $contentboxcolor: #ecebe4;
     display: flex;
     justify-content: center;
 }
-// This part is to help keep the footer in place.
+// Reduces margin and padding to 0 for the website allowing the header and footer to expand across the screen.
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+// This part is to help keep the footer in place.
 *:before,
 *:after {
  box-sizing: border-box;
@@ -50,12 +52,13 @@ body {
  height: 100%;
  position: relative;
 }
+//This container is a main container that wraps around all of the content within the body.
 .Maincontainer {
     min-height: 100vh; /* will cover the 100% of viewport */
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 100px; /* height of your footer */
+    padding-bottom: 100px; 
    }
 // Adds a background image to the website
 body {
@@ -72,6 +75,7 @@ body {
     left: 0;
     background-image: linear-gradient(gray, black);
 }
+//This part is reponsible for aligning the profile image with my name
 .topcontainer {
     @include flexdisplay();
     flex-direction: column;
@@ -82,11 +86,12 @@ body {
     align-self: center;
     margin-top: 2em;
 }
+//Makes sure that the content is centered.
 header {
     @include flexdisplay();
     text-align: center;
 }
-
+//Styles the profile photo
 .profilephoto img {
     border-radius: 100%;
     vertical-align: middle;
@@ -98,7 +103,7 @@ header {
 h1 {
     @include heading1style();
 }
-
+//Responsible positioning the paragraphs
 .paragraphcontainer {
     @include flexdisplay();
     margin-top: 1em;
@@ -154,15 +159,18 @@ footer {
     margin-top: 2%;
     // margin-bottom: 2%;
 }
+//Removes list styling
 li {
     list-style-type: none;
 }
+//Changes the styling of the link
 .link {
     font-family: $primaryfont;
     color: $linkfontcolor;
     font-size: 1em;
     text-decoration: underline;
 }
+//Changes the styling for the navbar within the about me, blog, projects and contact pages.
 .altnavdiv {
     background-color: $footerbackground;
     width: 100%;
@@ -181,9 +189,11 @@ li {
 .navbutton3 {
     margin: 5px; 
 }
+//Ensures that hadings have a consistent font styling.
 h2 {
     @include heading2style();
 }
+//Ensures that paragraphs and heading 3's have a consistent font styling.
 p, h3 {
     font-family: $primaryfont;
 }
@@ -254,7 +264,6 @@ h3 {
     flex-wrap: wrap;
 }
 // This is responsible in creating the form to fill out in the contacts section
-// Style inputs with type="text", select elements and textareas 
 input[type=text], select, textarea {
     width: 95%; // Full width 
     padding: 12px; // Some padding
@@ -276,7 +285,7 @@ input[type=text], select, textarea {
     cursor: pointer;
   }
   
-  // When moving the mouse over the submit button, add a darker green color 
+  // When moving the mouse over the submit button
   input[type=submit]:hover {
     background-color: #758ECD;
   }
