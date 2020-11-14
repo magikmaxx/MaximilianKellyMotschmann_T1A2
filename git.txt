@@ -1,0 +1,29 @@
+commit 4c26fc22fe7f281ca07df8a4ae768c977926127e
+Author: magikmaxx <mk.motschmann@gmail.com>
+Date:   Sat Nov 14 14:31:43 2020 +1000
+
+    Commit with Comments
+
+commit 00554441015610f98c2a396d05f8b724b1e9fb48
+Author: magikmaxx <mk.motschmann@gmail.com>
+Date:   Fri Nov 13 11:16:38 2020 +1000
+
+    Commit 13Nov
+
+commit 44edacbb88f99b135d2de04ee30d3922d732f7ab
+Author: magikmaxx <mk.motschmann@gmail.com>
+Date:   Thu Nov 12 15:00:36 2020 +1000
+
+    Later commit
+
+commit 7a7dacfa67adb7b84101b1059137ee95deab69e5
+Author: magikmaxx <mk.motschmann@gmail.com>
+Date:   Tue Nov 10 12:26:04 2020 +1000
+
+    Further Commit
+
+commit dbb070905a302971a6a97091f0a60a0dca21a26b
+Author: magikmaxx <mk.motschmann@gmail.com>
+Date:   Thu Nov 5 12:27:24 2020 +1000
+
+    initial commit
